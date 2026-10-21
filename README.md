@@ -45,7 +45,7 @@
 - Separate **Continue watching** rows for **Series**, **Movies** and **Channels**, plus favorite channels,
   new movies, new series, favorite movies and favorite series.
 - Channel cards show the logo, the name and **what's on now**.
-- **Trailers in the spotlight**: stop on a movie or series and its trailer plays muted behind the details (can be turned off).
+- **Trailers in the spotlight**: stop on a movie or series and its trailer plays behind the details, muted or with sound (both in Settings).
 - **Hold OK on a card** for a quick menu: add to favorites, remove from Continue watching, mark a movie as watched.
 
 ### Live TV
@@ -150,7 +150,7 @@ it with a file manager. Or install it with `adb install argus.apk`.
 
 | Section | What you'll find |
 |---|---|
-| **General** | Language (System, English, العربية), theme, interface size, text size, grid size, trailers on Home, screensaver |
+| **General** | Language (System, English, العربية), theme, interface size, text size, grid size, trailers on Home, trailer sound, screensaver |
 | **Playlist** | Switch or add playlists, account status, **Update now**, automatic updates |
 | **Player** | Built-in or external player, live preview, open last channel on start, auto-play next episode, Skip intro, channel key direction, aspect ratio, audio and subtitle language, subtitle size, color, background and position |
 | **Playback & decoding** | Live stream format, buffer, audio decoder, match frame rate, tunneled playback, user agent |
