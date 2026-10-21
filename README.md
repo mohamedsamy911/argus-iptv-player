@@ -45,6 +45,7 @@
 - Separate **Continue watching** rows for **Series**, **Movies** and **Channels**, plus favorite channels,
   new movies, new series, favorite movies and favorite series.
 - Channel cards show the logo, the name and **what's on now**.
+- **Trailers in the spotlight**: stop on a movie or series and its trailer plays muted behind the details (can be turned off).
 - **Hold OK on a card** for a quick menu: add to favorites, remove from Continue watching, mark a movie as watched.
 
 ### Live TV
@@ -66,7 +67,8 @@
 - A time shift setting if your guide runs early or late.
 
 ### Movies and series
-- Every category, grid or list view, sorting, favorites and search.
+- Every category, grid or list view, favorites and search.
+- **Sort** by name, recently added, rating or year, and **filter** to rated 7+ / 8+ or added this month / year.
 - Detail pages with the poster, backdrop, plot, director, cast, rating, running time and trailer.
 - **TMDB details** (optional, free key): Arabic or English plot, genres, **cast photos**, better artwork and
   trailers from The Movie Database, filling in what your provider leaves out.
@@ -80,7 +82,8 @@
 ### Player
 - Built on **Media3 / ExoPlayer** with an **FFmpeg** audio decoder for AC3, E-AC3, DTS and other formats TVs
   often can't play.
-- Audio track and subtitle choice, preferred audio and subtitle language, and subtitle size.
+- Audio track and subtitle choice, preferred audio and subtitle language.
+- **Subtitle style**: size, color (white, yellow, light blue), background (outline, shadow, dark box) and a higher position.
 - Aspect ratio (fit, fill, zoom), playback speed and a sleep timer.
 - **Stream info** overlay: resolution, frame rate, codecs, bitrate, connection speed, buffer and dropped frames.
 - Buffer size, hardware or software audio decoding, **match frame rate (AFR)**, tunneled playback and a custom
@@ -97,6 +100,7 @@
 - Smooth remote navigation: rows only scroll when needed and focus comes back to where you were.
 - Mouse and touch work too (handy on phones, tablets and Windows Subsystem for Android).
 - An "Exit Argus?" check so one stray Back press doesn't close the app.
+- A **screensaver** with posters and the clock after 5–30 idle minutes (never during playback).
 
 ### Look and language
 - **English and Arabic** throughout, with a full right-to-left layout in Arabic and an in-app language switch.
@@ -146,9 +150,9 @@ it with a file manager. Or install it with `adb install argus.apk`.
 
 | Section | What you'll find |
 |---|---|
-| **General** | Language (System, English, العربية), theme, interface size, text size, grid size |
+| **General** | Language (System, English, العربية), theme, interface size, text size, grid size, trailers on Home, screensaver |
 | **Playlist** | Switch or add playlists, account status, **Update now**, automatic updates |
-| **Player** | Built-in or external player, live preview, open last channel on start, auto-play next episode, Skip intro, channel key direction, aspect ratio, audio and subtitle language, subtitle size |
+| **Player** | Built-in or external player, live preview, open last channel on start, auto-play next episode, Skip intro, channel key direction, aspect ratio, audio and subtitle language, subtitle size, color, background and position |
 | **Playback & decoding** | Live stream format, buffer, audio decoder, match frame rate, tunneled playback, user agent |
 | **Lists & TV guide** | Channel order, guide time shift, **TV guide source** and **guide links**, guide status |
 | **Movie and series details** | **TMDB key** for richer details (see below) |
@@ -220,6 +224,7 @@ https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz
 ### أهم المزايا
 - **واجهة رئيسية بأسلوب نتفليكس** مع تحية وبطاقة كبيرة "أكمل من حيث توقفت"، وصفوف متابعة المشاهدة للمسلسلات والأفلام والقنوات.
 - **البحث في دليل البرامج**، و**دليل مصغّر** داخل المشغّل يعرض ما يُعرض الآن والتالي، و**تحديد العناوين كمُشاهَدة**.
+- **إعلانات تُعرض في البطاقة الكبيرة** بالرئيسية، و**شاشة توقف**، و**فلترة وترتيب** الأفلام حسب السنة والتقييم، و**تنسيق الترجمة** (اللون والخلفية والموضع).
 - **البث المباشر** بكل الفئات، مع المفضلة والمشاهدة مؤخرًا، وعرض شبكي أو قائمة، ومعاينة القناة، والتنقل بين القنوات، والإعادة (Catch-up).
 - **دليل برامج كامل** من المزوّد أو من **روابط XMLTV متعددة** تضيفها بنفسك، مع **تذكير بالبرامج** قبل بدايتها.
 - **الأفلام والمسلسلات** مع **متابعة المشاهدة من حيث توقفت**، و**التشغيل التلقائي للحلقة التالية**، و**زر تخطي المقدمة**.
