@@ -45,11 +45,13 @@
 - Separate **Continue watching** rows for **Series**, **Movies** and **Channels**, plus favorite channels,
   new movies, new series, favorite movies and favorite series.
 - Channel cards show the logo, the name and **what's on now**.
+- **Hold OK on a card** for a quick menu: add to favorites, remove from Continue watching, mark a movie as watched.
 
 ### Live TV
 - All your categories, with **favorites**, **recently watched** and **new** lists built in.
 - **Grid or list** view, sorting by number or name, and a **live preview** of the focused channel.
-- Full-screen player with channel up/down zapping, number entry, a channel list panel and the last-channel key.
+- Full-screen player with channel up/down zapping, number entry and the last-channel key.
+- **Mini guide** in the player: OK (or the remote's GUIDE key) opens the channel list with what's on now on every channel and what's next on the focused one.
 - **Catch-up** (replay) for channels that support it, straight from the TV guide.
 - Option to open the **last channel on start**.
 
@@ -60,6 +62,7 @@
 - Channels are matched by the provider's guide id or by name ("MBC Masr HD" matches "MBC Masr").
 - **Program reminders**: press OK on a show that hasn't started, and a "Starting now" popup offers to switch
   to the channel when it begins.
+- **Search the guide**: Search also finds shows by name across all channels, "On now" to watch or later to set a reminder.
 - A time shift setting if your guide runs early or late.
 
 ### Movies and series
@@ -72,6 +75,7 @@
 - **Auto-play next episode** with a 10-second "Next episode in…" card, and a **Skip intro** button.
   Both can be turned off.
 - Previous and next episode from the player.
+- **Mark as watched / unwatched**: a button on movies, and hold OK on an episode.
 
 ### Player
 - Built on **Media3 / ExoPlayer** with an **FFmpeg** audio decoder for AC3, E-AC3, DTS and other formats TVs
@@ -215,6 +219,7 @@ https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz
 
 ### أهم المزايا
 - **واجهة رئيسية بأسلوب نتفليكس** مع تحية وبطاقة كبيرة "أكمل من حيث توقفت"، وصفوف متابعة المشاهدة للمسلسلات والأفلام والقنوات.
+- **البحث في دليل البرامج**، و**دليل مصغّر** داخل المشغّل يعرض ما يُعرض الآن والتالي، و**تحديد العناوين كمُشاهَدة**.
 - **البث المباشر** بكل الفئات، مع المفضلة والمشاهدة مؤخرًا، وعرض شبكي أو قائمة، ومعاينة القناة، والتنقل بين القنوات، والإعادة (Catch-up).
 - **دليل برامج كامل** من المزوّد أو من **روابط XMLTV متعددة** تضيفها بنفسك، مع **تذكير بالبرامج** قبل بدايتها.
 - **الأفلام والمسلسلات** مع **متابعة المشاهدة من حيث توقفت**، و**التشغيل التلقائي للحلقة التالية**، و**زر تخطي المقدمة**.
