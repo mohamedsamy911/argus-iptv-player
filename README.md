@@ -39,14 +39,17 @@
 ## Features
 
 ### Home
-- **Netflix-style home** with a warm "Good evening" greeting, the date and the time.
+- **Netflix-style home** with the date and the time in the corner.
 - A big **spotlight card** for the focused title: artwork, year, genre, rating and plot, or
   **"Pick up where you left off"** with the episode and the minutes left.
-- Separate **Continue watching** rows for **Series**, **Movies** and **Channels**, plus favorite channels,
-  new movies, new series, favorite movies and favorite series.
+- One **Continue watching** row for series, movies and channels, then **On now** (your recent channels),
+  favorite channels, new movies, new series, favorite movies and favorite series.
+- **New episodes**: after a playlist update, a series you're watching that got new episodes moves to the front
+  of Continue watching with a **"2 NEW"** tag, and the spotlight says so.
 - Channel cards show the logo, the name and **what's on now**.
 - **Trailers in the spotlight**: stop on a movie or series and its trailer plays behind the details, muted or with sound (both in Settings).
-- **Hold OK on a card** for a quick menu: add to favorites, remove from Continue watching, mark a movie as watched.
+- **Hold OK on a card** for a quick menu: add to favorites, remove from Continue watching, mark a movie as watched,
+  or, on a channel, play it or add it to multi-view.
 
 ### Live TV
 - All your categories, with **favorites**, **recently watched** and **new** lists built in.
@@ -55,6 +58,17 @@
 - **Mini guide** in the player: OK (or the remote's GUIDE key) opens the channel list with what's on now on every channel and what's next on the focused one.
 - **Catch-up** (replay) for channels that support it, straight from the TV guide.
 - Option to open the **last channel on start**.
+- **Hold OK on a channel** (in Live TV, the TV guide or Home): play it, add it to multi-view or to favorites.
+
+### Multi-view
+- Watch **up to 4 live channels at once**. Open it from the player's **Options → Multi-view**, or hold OK on a
+  channel and choose **Add to multi-view**.
+- Pick a layout each time: **2 side by side**, **3** (one big, two small), **4 in a grid** or **1 + 3**. Press ▲ on
+  a top screen to switch layouts while watching.
+- Only the highlighted screen plays sound. OK on a screen: watch it full screen, change the channel, make it the
+  main screen or remove it.
+- Your set of channels is kept for next time.
+- Some providers limit how many channels play at once: a refused screen says so and the others keep playing.
 
 ### TV guide (EPG)
 - A full **TV guide grid**: 24 hours back and 24 hours ahead, by category.
@@ -78,6 +92,8 @@
   Both can be turned off.
 - Previous and next episode from the player.
 - **Mark as watched / unwatched**: a button on movies, and hold OK on an episode.
+- **New episodes** are marked on the series page: a **Play new episode** button, a dot on the season and a
+  **NEW** tag on each new episode.
 
 ### Player
 - Built on **Media3 / ExoPlayer** with an **FFmpeg** audio decoder for AC3, E-AC3, DTS and other formats TVs
@@ -90,6 +106,9 @@
   user agent for difficult streams.
 - Automatic fallback between stream formats (`.ts`, `.m3u8`) when a provider only serves one.
 - Option to use an **external player** instead (for example VLC or MX Player).
+- **Picture-in-picture**: keep watching in a small window over the TV home screen or another app, from the
+  player's Options or by pressing Home. Only on TVs that support it (on Google TV, Android 14 or newer); elsewhere
+  the option is hidden.
 
 ### Made for the TV
 - **Type on your phone instead of the remote**: scan a QR code to add a playlist or to fill in a settings
@@ -101,11 +120,16 @@
 - Mouse and touch work too (handy on phones, tablets and Windows Subsystem for Android).
 - An "Exit Argus?" check so one stray Back press doesn't close the app.
 - A **screensaver** with posters and the clock after 5–30 idle minutes (never during playback).
+- A **speed test** that plays one of your provider's channels for 8 seconds and shows the speed in Mbps, the
+  response time, which qualities (SD, HD, Full HD, 4K) will play smoothly and how many multi-view screens your
+  connection can carry.
 
 ### Look and language
 - **English and Arabic** throughout, with a full right-to-left layout in Arabic and an in-app language switch.
 - Four themes: **Dark** (default), **Argus** (warm amber), **Cinema** (black and red) and **Light**.
-- Interface size, text size and grid size settings for any TV and viewing distance.
+- Interface size, text size and poster size settings for any TV and viewing distance.
+- **12-hour or 24-hour clock** (7:30 PM or 19:30), or the same as the TV, on Home, the TV guide, the player and
+  the screensaver.
 
 ### Account and content
 - Several playlists, each with its account status, expiry date and number of connections.
@@ -150,14 +174,14 @@ it with a file manager. Or install it with `adb install argus.apk`.
 
 | Section | What you'll find |
 |---|---|
-| **General** | Language (System, English, العربية), theme, interface size, text size, grid size, trailers on Home, trailer sound, screensaver |
+| **General** | Language (System, English, العربية), **time format**, theme, interface size, text size, poster size, trailers on Home, trailer sound, screensaver |
 | **Playlist** | Switch or add playlists, account status, **Update now**, automatic updates |
-| **Player** | Built-in or external player, live preview, open last channel on start, auto-play next episode, Skip intro, channel key direction, aspect ratio, audio and subtitle language, subtitle size, color, background and position |
-| **Playback & decoding** | Live stream format, buffer, audio decoder, match frame rate, tunneled playback, user agent |
-| **Lists & TV guide** | Channel order, guide time shift, **TV guide source** and **guide links**, guide status |
+| **Player** | Built-in or external player, **picture-in-picture on Home** (TVs that support it), live preview, open last channel on start, channel key direction, auto-play next episode, Skip intro, aspect ratio, audio and subtitle language, subtitle size, color, background and position |
+| **Playback & decoding** | **Speed test**, live stream format, buffer, user agent, audio decoder, match frame rate, tunneled playback |
+| **Lists & TV guide** | Channel order, **TV guide source** and **guide links**, guide status, guide time shift |
 | **Movie and series details** | **TMDB key** for richer details (see below) |
-| **Parental control** | PIN, hide and lock categories |
-| **Data** | Clear watch history, automatic update check, version and **Check for updates** |
+| **Privacy & parental control** | PIN, hide and lock categories, clear watch history |
+| **About** | Version, **Check for updates**, automatic update check |
 
 Sections with long text fields have a **Set up from your phone** row: scan the QR code, edit everything on your
 phone and tap Send.
@@ -188,7 +212,7 @@ https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz
 - **Update** downloads the new version and opens the Android installer. Press **Install**. Your playlists,
   favorites, history and settings stay.
 - The first time, Android asks you to allow Argus to **install apps**. Turn it on, go back and press Update again.
-- You can check by hand from *Settings → Data → Version*, and turn the automatic check off there.
+- You can check by hand from *Settings → About → Check for updates*, and turn the automatic check off there.
 
 ---
 
@@ -222,7 +246,9 @@ https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz
 > (عنوان السيرفر واسم المستخدم وكلمة المرور).
 
 ### أهم المزايا
-- **واجهة رئيسية بأسلوب نتفليكس** مع تحية وبطاقة كبيرة "أكمل من حيث توقفت"، وصفوف متابعة المشاهدة للمسلسلات والأفلام والقنوات.
+- **واجهة رئيسية بأسلوب نتفليكس** مع بطاقة كبيرة "أكمل من حيث توقفت"، وصف متابعة المشاهدة للمسلسلات والأفلام والقنوات.
+- **الحلقات الجديدة**: بعد تحديث القائمة، ينتقل المسلسل الذي تتابعه وصلته حلقات جديدة إلى أول صف متابعة المشاهدة مع علامة "جديدة"، مع زر **تشغيل الحلقة الجديدة** في صفحة المسلسل.
+- **العرض المتعدد**: شاهد حتى **4 قنوات مباشرة معًا** بتخطيطات مختلفة (2 جنبًا إلى جنب، 3، شبكة 4، 1 + 3).
 - **البحث في دليل البرامج**، و**دليل مصغّر** داخل المشغّل يعرض ما يُعرض الآن والتالي، و**تحديد العناوين كمُشاهَدة**.
 - **إعلانات تُعرض في البطاقة الكبيرة** بالرئيسية، و**شاشة توقف**، و**فلترة وترتيب** الأفلام حسب السنة والتقييم، و**تنسيق الترجمة** (اللون والخلفية والموضع).
 - **البث المباشر** بكل الفئات، مع المفضلة والمشاهدة مؤخرًا، وعرض شبكي أو قائمة، ومعاينة القناة، والتنقل بين القنوات، والإعادة (Catch-up).
@@ -233,6 +259,9 @@ https://epgshare01.online/epgshare01/epg_ripper_AE1.xml.gz
 - **الكتابة من هاتفك بدلًا من الريموت**: امسح رمز QR لإضافة قائمة تشغيل أو لتعبئة إعدادات (روابط الدليل، مفتاح TMDB) من هاتفك.
 - صف على **شاشة Android TV الرئيسية**، و**البحث الصوتي**، و**أربعة مظاهر**، والتحكم في حجم الواجهة والخط والشبكة.
 - **رمز PIN للرقابة الأبوية**، وإخفاء الفئات وقفلها، وتحديث المحتوى تلقائيًا.
+- **تنسيق الوقت**: ساعة 12 أو 24 (‏7:30 م أو 19:30) أو مثل التلفزيون.
+- **صورة داخل صورة**: تابع المشاهدة في نافذة صغيرة فوق الشاشة الرئيسية للتلفزيون، على أجهزة التلفزيون التي تدعمها (Google TV بإصدار Android 14 أو أحدث).
+- **اختبار السرعة**: اعرف سرعة وصول البث من مزوّدك، والجودة التي يمكن تشغيلها بسلاسة، وعدد شاشات العرض المتعدد الممكنة.
 - **تحديث التطبيق ذاتيًا** من هذه الصفحة، مع إمكانية البحث عن تحديث يدويًا أو إيقاف البحث التلقائي.
 
 ### التثبيت
